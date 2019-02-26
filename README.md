@@ -1,3 +1,3 @@
 # IDED_Scripting_201910_Parcial1_base
 
-Agregue en este README su nombre e ID.
+Miguel Angel Vargas Jaramillo / 000242427
