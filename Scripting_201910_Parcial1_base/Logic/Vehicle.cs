@@ -1,4 +1,5 @@
-﻿namespace Scripting_201910_Parcial1_base.Logic
+﻿using System;
+namespace Scripting_201910_Parcial1_base.Logic
 {
     public abstract class Vehicle
     {
@@ -14,7 +15,7 @@
         {
             get
             {
-                return 0F;
+                return baseMaxSpeed;
             }
         }
 
@@ -33,15 +34,42 @@
         {
             bool result = false;
 
-            if (Type == part.Type || part.Type == VehicleType.Any)
+            if (part.Type == VehicleType.Any || part.Type==VehicleType.Car|| part.Type==VehicleType.Bike)
             {
+                
+                baseMaxSpeed = baseMaxSpeed * part.SpeedBonus;
+
             }
+           
+            
 
             return result;
         }
 
         public void Upgrade()
         {
+            float baseSpeed;
+            if (Level > 0 && Level <= 3)
+            {
+
+                if (Level == 1)
+                {
+                   
+                    baseSpeed = baseMaxSpeed * 0.05f;
+                    baseMaxSpeed = baseMaxSpeed + baseSpeed;
+                }
+                if (Level == 2)
+                {
+                    baseSpeed = baseMaxSpeed * 0.05f;
+                    baseMaxSpeed = baseMaxSpeed + baseSpeed;
+                }
+                if (Level == 3)
+                {
+                    
+                    baseSpeed = baseMaxSpeed * 0.05f;
+                    baseMaxSpeed = baseMaxSpeed + baseSpeed;
+                }
+            }
         }
     }
 }

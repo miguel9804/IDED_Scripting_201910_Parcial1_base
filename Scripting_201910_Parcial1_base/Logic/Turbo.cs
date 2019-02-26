@@ -1,4 +1,5 @@
-﻿namespace Scripting_201910_Parcial1_base.Logic
+﻿using System;
+namespace Scripting_201910_Parcial1_base.Logic
 {
     public class Turbo : Part
     {
@@ -14,7 +15,8 @@
         {
             get
             {
-                return VehicleType.None;
+                
+                return VehicleType.Any;
             }
         }
     }
