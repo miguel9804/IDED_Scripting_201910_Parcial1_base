@@ -1,0 +1,13 @@
+Parcial (2.5 / 5.0)	
+	* Vehicle.Equip() no equipa una parte. Modifica los stats del vehículo según la parte que ingresa, pero no la equipa propiamente hablando, por tanto Vehicle.CurrentPart = null siempre.
+	* Vehicle.Equip equipa cualquier parte a cualquier vehículo, según esta implementación. Dicho eso, anula todo el propósito de tener partes para vehículos específicos.
+	* No hay nada que cambie a Vehicle.Level, por lo tanto Vehicle.Upgrade() nunca ejecutará la lógica que tiene.
+	* La implementación de Vehicle.Upgrade(), si bien podría funcionar, hace irrelevante a la propiedad Vehicle.Level; además que la forma en como se modifica baseMaxSpeed puede traer bugs.
+	* El accesor Part.SpeedBonus siempre retorna 0
+	* Por qué el constructor de Part multiplica el speedBonus por ese speedLimit? Según esa instrucción, el speedBonus de la parte siempre será la mitad del valor pretendido.
+	* Part.Upgrade() tiene los mismos problemas de Vehicle.Upgrade()
+
+Bonificación (0.0 / 0.5)
+	No se presentó propuesta para la bonificación
+	
+Total: 2.5 / 5.0
